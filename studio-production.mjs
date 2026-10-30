@@ -11,7 +11,7 @@ export function productionService({queueRender,db,config:configNow,save,localAss
  const controllers=new Map();
  async function text(payload,cfg,onProgress=()=>{},signal,imageFiles=[]){
   if(cfg.provider==='codex')return codexStoryboard(payload,cfg.codexModel,onProgress,signal,imageFiles);
-  if(!cfg.baseUrl||!cfg.model||!cfg.apiKey)throw Error('请先配置文字模型API或本地Codex');
+  if(!cfg.baseUrl||!cfg.model||!cfg.apiKey)throw Error('请先在模型设置中配置文字模型接口、模型名称与 API Key');
   const content=imageFiles.length?[{type:'text',text:JSON.stringify(payload)},...imageFiles.map(file=>({type:'image_url',image_url:{url:'data:image/'+(file.endsWith('.png')?'png':file.endsWith('.webp')?'webp':'jpeg')+';base64,'+fs.readFileSync(file).toString('base64')}}))]:JSON.stringify(payload);
   const response=await fetch(cfg.baseUrl+'/chat/completions',{method:'POST',redirect:'error',signal:AbortSignal.any([AbortSignal.timeout(600000),...(signal?[signal]:[])]),headers:{'Content-Type':'application/json',Authorization:'Bearer '+cfg.apiKey},body:JSON.stringify({model:cfg.model,messages:[{role:'system',content:storyboardInstruction},{role:'user',content}],temperature:.6})});if(!response.ok)throw Error('文字服务返回 HTTP '+response.status+'（补计划带实际图片，文字服务需支持视觉输入）');const data=await response.json();try{return JSON.parse(data.choices[0].message.content.replace(/^```(?:json)?\s*|\s*```$/g,''));}catch{throw Error('文字模型未返回有效分镜JSON');}
  }
