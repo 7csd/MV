@@ -1,0 +1,14 @@
+{
+  "name": "paperlight-mv-studio",
+  "version": "0.4.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "check": "node --check server.mjs && node --check public/app.js && node --check creative.mjs && node --check codex-storyboard.mjs && node --check production.mjs && node --check providers.mjs && node --check media.mjs && node --check studio-production.mjs && node --check studio-workflow.mjs && node --check public/creative-ui.js && node --check creative-flow.mjs && node --check generation-tasks.mjs && node --check shot-flow.mjs",
+    "test": "node --test tests/archive-ui.test.mjs tests/api.test.mjs tests/creative.test.mjs tests/project-files.test.mjs tests/production.test.mjs tests/production-api.test.mjs tests/home.test.mjs tests/workflow.test.mjs tests/simple-flow.test.mjs tests/generation-tasks.test.mjs tests/shot-flow.test.mjs tests/shot-ui.test.mjs && node tests/ui-smoke.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

@@ -1,0 +1,16 @@
+import fs from 'node:fs';
+import vm from 'node:vm';
+import assert from 'node:assert/strict';
+const context=vm.createContext({window:{addEventListener(){}},document:{addEventListener(){},querySelector(){return {addEventListener(){}}}},setTimeout(){},clearTimeout(){},console});
+vm.runInContext(fs.readFileSync('public/creative-ui.js','utf8').replace('export function','function'),context);
+vm.runInContext(fs.readFileSync('public/app.js','utf8').replace(/^import .*$/m,'').replace(/^try\{await refresh\(\);.*$/m,''),context);
+const sample={id:'sample',name:'OLD SAMPLE',createdAt:'2020-01-01',duration:72,shots:[{title:'old',template:0,start:0}]};
+const latest={id:'latest',name:'NEW PROJECT',createdAt:'2026-10-26',duration:30,shots:[],lyrics:[],characterId:'custom',styleId:'custom'};
+const state={projects:[sample,latest],jobs:[],characters:[],styles:[]};
+vm.runInContext('state='+JSON.stringify(state),context);
+let html=vm.runInContext('home()',context);
+assert.ok(html.includes('NEW PROJECT'));assert.ok(html.includes('data-edit="latest"'));assert.ok(html.includes('本曲画面待创作'));assert.ok(!html.includes('/assets/poster.png'));assert.ok(!html.includes('data-action="play-hero"'));
+vm.runInContext(`state.projects[1].shots=[{title:'new shot',image:'/uploads/new.png',start:0}];state.jobs=[{projectId:'sample',status:'completed',output:'/old.mp4'},{projectId:'latest',status:'completed',output:'/new.mp4'}]`,context);
+html=vm.runInContext('home()',context);assert.ok(html.includes('/uploads/new.png'));assert.ok(html.includes('data-source="/new.mp4"'));assert.ok(!html.includes('/old.mp4'));
+vm.runInContext('state.projects=[]',context);assert.ok(vm.runInContext('home()',context).includes('创建你的第一个音乐故事'));
+console.log('Home latest project, pending artwork, matching video and empty state passed');

@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "createdAt": "2026-10-26T05:37:20.419Z",
+  "entries": [
+    {
+      "file": "public/assets/character-A.png",
+      "bytes": 2737793,
+      "sha256": "f75bbbee50c3f2c1dba80cab078fb81bc9506e46bef190ed648aafacee7bb819"
+    },
+    {
+      "file": "public/assets/character-B.png",
+      "bytes": 2632781,
+      "sha256": "b412f2ea2dd3a08d40109875c360a7221a46abb27731388fbd60c9c7e97b4491"
+    },
+    {
+      "file": "public/assets/character-C.png",
+      "bytes": 2441926,
+      "sha256": "1c3dc402673a1f5aeca6e816ac4de7217ea82758c4205fd953aac59fdece94fa"
+    },
+    {
+      "file": "public/assets/character-prompts.json",
+      "bytes": 7611,
+      "sha256": "662f77925a0a29e92854867c1cf74c8e2844b78ced55f9b4cb8607e5fc4c7350"
+    },
+    {
+      "file": "public/assets/source.zip",
+      "bytes": 26654622,
+      "sha256": "d63d8171a87f0ab0c7235a767b56036244c516a2d8451fdd12fc75fe4d318e29"
+    },
+    {
+      "file": "public/assets/song.mp3",
+      "bytes": 2910210,
+      "sha256": "7016047abd442db59d0b503d5da09c8cc0ff2585c13ed1ea800705986916e333"
+    },
+    {
+      "file": "public/assets/song.lrc",
+      "bytes": 1226,
+      "sha256": "d03ececf60db20d54031c667c2b1709d0edd227d348419dad9ee0ad9a293bec5"
+    },
+    {
+      "file": "public/assets/sample.mp4",
+      "bytes": 25826240,
+      "sha256": "8af74a8803b2925565a094bcccd7f11b5c66f3b2a8b37dc811caaeb503041518"
+    },
+    {
+      "file": "engine/public/characters-v2/prompts.json",
+      "bytes": 13566,
+      "sha256": "e409cdbc8991bab2d597bcb81185051fa87f225110044c00365f385f6913af41"
+    },
+    {
+      "file": "engine/src/data/character-rig.json",
+      "bytes": 6574,
+      "sha256": "f4dfa80a3b1c70cf7a104b2ab2db5d5393a38013575c7ab0736f432e86e80d76"
+    }
+  ]
+}

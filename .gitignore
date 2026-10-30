@@ -1,0 +1,31 @@
+# Local projects, uploads, credentials and generated results
+/data/
+/output/
+/tests/results/
+/render-verification.jpg
+.env
+.env.*
+!.env.example
+*.log
+
+# Dependencies and generated Remotion bundles
+node_modules/
+engine/.*-bundle/
+
+# Keep only the original sample's character reference archive
+/archive/*
+!/archive/character-options/
+!/archive/asset-manifest.json
+
+# Private second project and its experimental render assets
+engine/zhimi-*
+engine/public/zhimi-motion/
+engine/public/mv-assets-v3/
+engine/approved-walk.tsx
+engine/paper-stage.tsx
+engine/render-stage.mjs
+engine/review-reel.tsx
+engine/render-review-reel.mjs
+
+# Machine-specific historical validation notes
+/VALIDATION.md

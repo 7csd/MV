@@ -1,0 +1,362 @@
+{
+  "woman-front": {
+    "width": 1024,
+    "height": 1536,
+    "center": 480,
+    "floor": 1500,
+    "top": 40,
+    "layers": {
+      "head": {
+        "file": "characters-v2/woman-front-head.png",
+        "box": [
+          321,
+          32,
+          658,
+          341
+        ]
+      },
+      "leftArm": {
+        "file": "characters-v2/woman-front-leftArm.png",
+        "box": [
+          259,
+          300,
+          391,
+          870
+        ]
+      },
+      "rightArm": {
+        "file": "characters-v2/woman-front-rightArm.png",
+        "box": [
+          575,
+          303,
+          970,
+          607
+        ]
+      },
+      "leftLeg": {
+        "file": "characters-v2/woman-front-leftLeg.png",
+        "box": [
+          0,
+          1164,
+          496,
+          1513
+        ]
+      },
+      "rightLeg": {
+        "file": "characters-v2/woman-front-rightLeg.png",
+        "box": [
+          495,
+          1164,
+          1010,
+          1492
+        ]
+      },
+      "body": {
+        "file": "characters-v2/woman-front-body.png",
+        "box": [
+          213,
+          283,
+          863,
+          1164
+        ]
+      }
+    },
+    "headPivot": [
+      478,
+      294
+    ],
+    "armPivots": {
+      "leftArm": [
+        373,
+        326
+      ],
+      "rightArm": [
+        589,
+        327
+      ]
+    },
+    "legPivot": [
+      480,
+      1164
+    ]
+  },
+  "woman-threequarter": {
+    "width": 1024,
+    "height": 1536,
+    "center": 492,
+    "floor": 1510,
+    "top": 29,
+    "layers": {
+      "head": {
+        "file": "characters-v2/woman-threequarter-head.png",
+        "box": [
+          295,
+          18,
+          658,
+          351
+        ]
+      },
+      "leftArm": {
+        "file": "characters-v2/woman-threequarter-leftArm.png",
+        "box": [
+          259,
+          326,
+          386,
+          919
+        ]
+      },
+      "rightArm": {
+        "file": "characters-v2/woman-threequarter-rightArm.png",
+        "box": [
+          565,
+          307,
+          969,
+          658
+        ]
+      },
+      "leftLeg": {
+        "file": "characters-v2/woman-threequarter-leftLeg.png",
+        "box": [
+          65,
+          1194,
+          515,
+          1504
+        ]
+      },
+      "rightLeg": {
+        "file": "characters-v2/woman-threequarter-rightLeg.png",
+        "box": [
+          514,
+          1194,
+          962,
+          1520
+        ]
+      },
+      "body": {
+        "file": "characters-v2/woman-threequarter-body.png",
+        "box": [
+          236,
+          299,
+          891,
+          1194
+        ]
+      }
+    },
+    "headPivot": [
+      475,
+      302
+    ],
+    "armPivots": {
+      "leftArm": [
+        359,
+        344
+      ],
+      "rightArm": [
+        578,
+        340
+      ]
+    },
+    "legPivot": [
+      492,
+      1194
+    ]
+  },
+  "man-threequarter": {
+    "width": 1024,
+    "height": 1536,
+    "center": 520,
+    "floor": 1500,
+    "top": 16,
+    "layers": {
+      "head": {
+        "file": "characters-v2/man-threequarter-head.png",
+        "box": [
+          363,
+          1,
+          608,
+          304
+        ]
+      },
+      "leftArm": {
+        "file": "characters-v2/man-threequarter-leftArm.png",
+        "box": [
+          202,
+          284,
+          355,
+          874
+        ]
+      },
+      "rightArm": {
+        "file": "characters-v2/man-threequarter-rightArm.png",
+        "box": [
+          605,
+          277,
+          972,
+          642
+        ]
+      },
+      "leftLeg": {
+        "file": "characters-v2/man-threequarter-leftLeg.png",
+        "box": [
+          0,
+          749,
+          535,
+          1512
+        ]
+      },
+      "rightLeg": {
+        "file": "characters-v2/man-threequarter-rightLeg.png",
+        "box": [
+          534,
+          749,
+          1000,
+          1518
+        ]
+      },
+      "body": {
+        "file": "characters-v2/man-threequarter-body.png",
+        "box": [
+          316,
+          238,
+          693,
+          749
+        ]
+      }
+    },
+    "headPivot": [
+      493,
+      249
+    ],
+    "armPivots": {
+      "leftArm": [
+        332,
+        313
+      ],
+      "rightArm": [
+        626,
+        300
+      ]
+    },
+    "legPivot": [
+      520,
+      749
+    ]
+  },
+  "woman-sad": {
+    "width": 1024,
+    "height": 1536,
+    "center": 510,
+    "floor": 1513,
+    "top": 22,
+    "layers": {
+      "head": {
+        "file": "characters-v2/woman-sad-head.png",
+        "box": [
+          369,
+          14,
+          673,
+          286
+        ]
+      },
+      "leftArm": {
+        "file": "characters-v2/woman-sad-leftArm.png",
+        "box": [
+          294,
+          301,
+          412,
+          882
+        ]
+      },
+      "rightArm": {
+        "file": "characters-v2/woman-sad-rightArm.png",
+        "box": [
+          613,
+          303,
+          732,
+          688
+        ]
+      },
+      "leftLeg": {
+        "file": "characters-v2/woman-sad-leftLeg.png",
+        "box": [
+          366,
+          1222,
+          530,
+          1519
+        ]
+      },
+      "rightLeg": {
+        "file": "characters-v2/woman-sad-rightLeg.png",
+        "box": [
+          529,
+          1222,
+          952,
+          1518
+        ]
+      },
+      "body": {
+        "file": "characters-v2/woman-sad-body.png",
+        "box": [
+          272,
+          286,
+          813,
+          1222
+        ]
+      }
+    },
+    "headPivot": [
+      510,
+      285
+    ],
+    "armPivots": {
+      "leftArm": [
+        389,
+        326
+      ],
+      "rightArm": [
+        631,
+        328
+      ]
+    },
+    "legPivot": [
+      510,
+      1222
+    ]
+  },
+  "woman-seated": {
+    "width": 1024,
+    "height": 1536,
+    "center": 498,
+    "floor": 1514,
+    "top": 22,
+    "layers": {
+      "whole": {
+        "file": "characters-v2/woman-seated-whole.png",
+        "box": [
+          123,
+          13,
+          1004,
+          1520
+        ]
+      }
+    }
+  },
+  "man-seated": {
+    "width": 1024,
+    "height": 1536,
+    "center": 530,
+    "floor": 1484,
+    "top": 43,
+    "layers": {
+      "whole": {
+        "file": "characters-v2/man-seated-whole.png",
+        "box": [
+          25,
+          33,
+          1010,
+          1504
+        ]
+      }
+    }
+  }
+}
