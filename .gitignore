@@ -11,6 +11,9 @@
 # Dependencies and generated Remotion bundles
 node_modules/
 engine/.*-bundle/
+engine/.bundle*/
+engine/out/
+engine/out-v*/
 
 # Keep only the original sample's character reference archive
 /archive/*
