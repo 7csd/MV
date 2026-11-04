@@ -35,3 +35,7 @@
 .shot-image-preview{display:block;width:100%;padding:0;background:transparent;border-radius:8px;cursor:zoom-in}.shot-image-preview img{display:block}.shot-image-preview:hover{box-shadow:0 0 0 2px #93aa72}.shot-image-preview:focus-visible{outline:2px solid #93aa72;outline-offset:4px}.core-shot-image .toolbar .btn{white-space:nowrap}.image-preview-actions{display:flex;justify-content:flex-end;padding:12px 20px}
 
 .version-preview img,.version-preview video{display:block;width:100%;max-height:55vh;object-fit:contain;background:#161b1b;border-radius:12px}.core-shot-image>.text-button{margin-top:8px}
+
+.final-prompts{margin:18px 0;padding:14px;border:1px solid var(--line);border-radius:8px}.final-prompts textarea{min-height:220px;line-height:1.65;resize:vertical}.final-prompts .field{display:block;margin-top:14px}
+
+.final-prompt-section{border-top:1px solid var(--line);padding:12px 0}.final-prompt-section summary{cursor:pointer;font-size:12px;color:var(--muted)}.final-prompt-section .prompt-save-actions{display:flex;justify-content:flex-end;margin-top:10px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}

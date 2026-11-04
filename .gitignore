@@ -29,6 +29,10 @@ engine/paper-stage.tsx
 engine/render-stage.mjs
 engine/review-reel.tsx
 engine/render-review-reel.mjs
+engine/remaining-layers.json
+engine/remaining-shots.tsx
+engine/window-left.tsx
+engine/window-open-palm.tsx
 
 # Machine-specific historical validation notes
 /VALIDATION.md

@@ -10,7 +10,7 @@ test('镜头操作可见、动作编辑、意见选镜与所有镜头确认后�
  const ui=installWorkflow({$:()=>null,esc:s=>String(s??''),current:()=>p,state:{provider:{}},modal:(title,body)=>{modalHtml=body;},saveEditor:async()=>{},api:async(...v)=>calls.push(v),refresh:async()=>{},render:()=>{html=ui.editorView(p);},toast(){},perform:fn=>fn()});
  async function click(dataset,tab=false){const target={closest:selector=>selector===(tab?'[data-shot-view]':'[data-shot-action]')?{dataset}:null};await Promise.all(listeners.click.map(fn=>fn({target})));}
  try{
-  html=ui.editorView(p);assert.ok(html.includes('生成此镜头样片'));assert.ok(html.includes('data-motion-key="startState"'));assert.ok(html.includes('data-beat-action'));assert.ok(html.includes('保存动作安排'));
+  html=ui.editorView(p);assert.ok(html.includes('生成此镜头样片'));assert.ok(!html.includes('data-motion-key'));assert.ok(!html.includes('动作安排草稿'));assert.ok(html.includes('保存图片提示词'));assert.ok(html.includes('保存样片提示词'));assert.ok(html.includes('data-final-prompt="motion"'));assert.ok(html.includes('data-final-prompt="image"'));assert.equal((html.match(/class="final-prompt-section"/g)||[]).length,4);
   p.shots[0].image='/uploads/new.png';p.shots[0].mediaVersions={image:[{id:'old-image',number:1,url:'/uploads/old.png',createdAt:'2026-11-01T00:00:00Z'},{id:'new-image',number:2,url:'/uploads/new.png'}],motion:[{id:'old-video',number:1,url:'/uploads/old.mp4'}]};
   html=ui.editorView(p);assert.ok(html.includes('图片历史 · 2'));
   await click({shotAction:'history',index:'0',kind:'image'});assert.ok(modalHtml.includes('data-media-history'));assert.ok(modalHtml.includes('当前使用'));assert.ok(modalHtml.includes('/uploads/new.png'));

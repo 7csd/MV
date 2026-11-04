@@ -51,7 +51,7 @@ test('对话路线可导出并回传任意镜头，逐镜确认前阻止全片�
   assert.equal((await imported(3)).status,200);assert.equal((await review(3)).status,200);assert.equal((await request(`/api/projects/${id}/clip-review`,{index:3,decision:'approved',fingerprint:(await project()).creativeFlow.clips[3].fingerprint})).status,200);assert.equal((await project()).creativeFlow.allApproved,true);
   assert.equal((await project()).productionSummary.ready,4);
   assert.equal((await request(`/api/projects/${id}/render`,{quality:'full'})).status,400,'整片未验收不得正式导出');
-  const p=await project(),changed=structuredClone(p.shots);changed[0].production={...plan,endState:'纸山完全展开'};
+  const p=await project(),changed=structuredClone(p.shots);changed[0].production={...plan,endState:'纸山完全展开'};changed[0].finalPrompts.motion+='\n结束状态：纸山完全展开';
   assert.equal((await request(`/api/projects/${id}`,{shots:changed},'PATCH')).status,200);
   assert.equal((await project()).workflowSummary.samplesApproved,false);assert.equal((await project()).creativeFlow.approvedCount,3,'改第一镜不影响其他三镜确认');assert.equal((await request(`/api/projects/${id}/compose`,{})).status,400,'第一镜变更后不可合成');
   assert.equal((await request(`/api/projects/${id}/film-review`,{jobId:'fake',status:'approved'})).status,400);

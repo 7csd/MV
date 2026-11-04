@@ -4,7 +4,7 @@ import {randomUUID} from 'node:crypto';
 import {sourceFingerprint} from './production.mjs';
 
 const clone=v=>v===undefined?undefined:structuredClone(v);
-const inputs=s=>Object.fromEntries(['start','end','image','imageRole','prompt','production','imageGeneration'].map(k=>[k,clone(s[k])]));
+const inputs=s=>Object.fromEntries(['start','end','image','imageRole','prompt','production','imageGeneration','finalPrompts'].map(k=>[k,clone(s[k])]));
 const urlOf=(s,kind)=>kind==='image'?s.image:s.motion?.video;
 function remember(s,kind,url,metadata={}){
  if(!url)return;
@@ -44,6 +44,7 @@ export function selectMediaVersion(p,{index,kind,versionId},localAsset){
   if(s.preflight)s.preflight={...s.preflight,status:'pending'};
  }else{
   if(!v.inputs&&v.motion?.sourceFingerprint!==sourceFingerprint(s))throw Error('此旧样片缺少原始动作安排，可预览；请先恢复对应图片和动作安排后再使用');
+  if(s.finalPrompts&&JSON.stringify(v.inputs?.finalPrompts)!==JSON.stringify(s.finalPrompts))throw Error('此历史样片与当前最终提示词不一致，仅可预览，不能覆盖当前提示词');
   if(v.inputs){if(v.inputs.start!==s.start||v.inputs.end!==s.end)throw Error('镜头时长已改变，此样片仅可预览');Object.assign(s,clone(v.inputs));}
   s.motion=clone(v.motion);s.preflight=clone(v.preflight)||s.preflight;
  }

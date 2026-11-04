@@ -1,0 +1,7 @@
+# Generation and returned media
+
+- The saved `shot.finalPrompts.image` and `shot.finalPrompts.motion` shown in the project editor are the only generation instructions. Read the current `/generation-tasks` task and use `request.prompt` verbatim with its references and output parameters. Do not substitute old scripts, chat summaries, draft `production` fields, or historical prompts.
+- Generating or returning media does not authorize editing the project requirements. Do not change final prompts, action plans, or success criteria to match an easier implementation or an existing image. Report an incompatible first frame or missing assets; prepare the required assets when authorized. Preserve the main action.
+- Return only the generated artifact and its actual production provenance through `/generation-result`. Do not PATCH project plans or write `data/studio.json` as part of generation. Prompt editing/recovery is a separate user-authorized operation.
+- Technical checks prove format and detectable frame changes only. Verify the visible start state, action, contact/release and end state against the task. Never claim a small layer rotation, zoom or rain animation completes a missing grasp, handover, walk, book closing or catch.
+- Preserve historical media and their original task records. A historical sample must not silently replace the current final prompts. Never manufacture user approval.

@@ -23,3 +23,9 @@
 公开版本通过配置的 API 服务执行生成任务。HTTP服务、模型、鉴权、状态映射与时长参数需按服务商配置。旧 handoff、内部画面检查和 motion-import 保留供工程工具使用，用户主入口使用统一任务。
 
 所有动态源须达到1920×1080，规范化24fps。完整观看版可720p，正式导出1080p。模拟服务测试验证软件链路，实际艺术效果仍由用户观看确认。
+
+## 最终提示词协议
+
+`shots[].finalPrompts.image/motion` 为页面可编辑的唯一生成文本。生成任务版本为2，`request.prompt` 原样快照最终文本；手动执行和API均使用该快照。`production` 仅为草稿，通过 `GET /api/projects/:id/prompt-drafts?index=N` 生成候选文本，显式保存到 finalPrompts 才生效。生成时不追加历史反馈。
+
+`generation-tasks` 只导出当前有效任务，历史任务保留在项目中供追溯而不参与派工。回传只接受 taskId、artifact、sourceDescription、sourceFiles、executor，不接受修改镜头或提示词。结果保存 prompt 快照。历史视频的输入提示词与当前不同则只能预览，不能切换以覆盖当前要求。
